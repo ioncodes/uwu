@@ -26,6 +26,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_txtCode_returnPressed()
 {
     QString code = ui->txtCode->text();
+    ui->lwHistory->insertItem(ui->lwHistory->count(), code);
     unsigned char* assembly = assembler->Assemble(code);
     if(assembly != nullptr)
     {
