@@ -13,6 +13,7 @@ public:
     void Execute(unsigned char *code);
     Registers ReadRegisters();
     Flags ReadFlags();
+    void SetRegister(int reg, int value);
 private:
     uc_engine *m_uc;
     uint64_t m_rip = 0;

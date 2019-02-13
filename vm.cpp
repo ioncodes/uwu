@@ -19,6 +19,10 @@ void VM::Execute(unsigned char *code)
     m_rip += sizeof(code);
 }
 
+void VM::SetRegister(int reg, int value)
+{
+    uc_reg_write(m_uc, reg, &value);
+}
 
 Flags VM::ReadFlags()
 {
