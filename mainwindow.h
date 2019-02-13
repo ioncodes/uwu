@@ -18,8 +18,6 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
-    void updateRegisters();
 private slots:
     void on_txtRax_returnPressed();
     void on_txtCode_returnPressed();
@@ -28,6 +26,8 @@ private:
     Ui::MainWindow *ui;
     VM *vm;
     Assembler *assembler;
+    void updateRegisters();
+    void updateFlags();
 };
 
 #endif // MAINWINDOW_H

@@ -3,6 +3,7 @@
 
 #include "registers.h"
 #include "unicorn/unicorn.h"
+#include "flags.h"
 
 
 class VM
@@ -11,6 +12,7 @@ public:
     VM();
     void Execute(unsigned char *code);
     Registers ReadRegisters();
+    Flags ReadFlags();
 private:
     uc_engine *m_uc;
     uint64_t m_rip = 0;

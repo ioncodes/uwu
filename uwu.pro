@@ -34,7 +34,8 @@ HEADERS += \
         mainwindow.h \
     vm.h \
     assembler.h \
-    registers.h
+    registers.h \
+    flags.h
 
 FORMS += \
         mainwindow.ui
